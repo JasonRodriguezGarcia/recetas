@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <header>
+        <h2 id="h2Header">RECIPE BOOK (RECETARIO) v1.0</h2>
+        <div id="botonesHeader">
+            <button class="tableIcon" title="Create" onclick="createEditRecipe()">
+                <i class="fa-solid fa-square-plus fa-2xl"></i>
+            </button>
+            <button class="tableIcon" title="Export" onclick="exportRecipe()">
+                <i class="fa-solid fa-file-export fa-2xl"></i>
+            </button>
+            <button class="tableIcon" title="Import">
+                <i class="fa-solid fa-file-import fa-2xl" onclick="importRecipe()"></i>
+            </button>
+            <button class="tableIcon" title="Delete All">
+                <i class="fa-solid fa-trash-can fa-2xl" onclick="deleteAll()"></i>
+            </button>
+        </div>
+    </header>
+    <!-- <a href="css/header.css" download="formus.css">Descarga header.css</a> -->
+    <table border cellpadding="0" cellspacing="0" id="tabla">
+        <!-- CABECERA TABLA -->
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Recipe</th>
+                <th>Dish type</th>
+                <th>Dificulty</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- empty -->
+        </tbody>
+    </table>
+
+    <dialog id = "crearReceta">
+        <h1 id="h1Receta"></h1> <!-- CREAR / MODIFICAR RECETA -->
+        <br>
+        <fieldset>
+            <legend>Recipe Details</legend>
+            <form action="" autocomplete="off">
+                <label for="idReceta">ID:</label>
+                <input type="text" name="idReceta" id="idReceta" disabled> 
+
+                <label for="nombre">Name:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Escribe el nombre" maxlength="35">
+
+                <label for="tipo">Dish type:</label>
+                <select name="tipo" id="tipo">
+                    <option value="" disabled>Select type</option>
+                    <option value="1">First Course</option>
+                    <option value="2">Main Course</option>
+                    <option value="3">Dessert</option>
+                </select>
+
+                <label for="ingredientes">Ingredients:</label>
+                <textarea name="ingredientes" id="ingredientes" rows="6"  cols="50" placeholder="Type text ..."></textarea>
+
+                <label for="preparacion">Preparation:</label>
+                <textarea name="preparacion" id="preparacion" rows="6"  cols="50" placeholder="Type text ..."></textarea>
+
+                <label for="dificultad">Dificulty:</label>
+                <div>
+                    <input id="dificultad" type="range" value="2" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                        <output id="outputValue">2</output>
+                </div>
+                <label for="tiempo">Time (min.):</label>
+                <input type="number" name="tiempo" id="tiempo" min=1 max=240 value="5">
+
+                <label for="foto">Photo(notworking):</label>
+                <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
+
+                <!-- <img src="." alt=""> -->
+            </form>
+            <div id="buttonsRecipe">
+                <button type="button" onclick="window.print()">Imprimir</button>
+                <button id="saveButton" type="button" onclick="save()">Save</button>
+                <button id="cancelButton" type="button" onclick="cancel()">Cancel</button>
+            </div>
+        </fieldset>        
+    </dialog>
+    <script src="/recetas.js"></script>
+</body>
+</html>

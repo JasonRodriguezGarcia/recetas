@@ -1,0 +1,68 @@
+====================================================
+PROYECTO RECETARIO
+====================================================
+
+DESCRIPCIÓN
+====================================================
+Tienes que hacer una aplicación para la gestión de RECETAS DE COCINA. 
+Toda la aplicación se hará en una sola página html, con los css y los js en archivos externos (recomendación: crea una carpeta para este proyecto).
+
+En la página hay un <header> con el título y un área para botones (crear, exportar, importar...). Y un área principal con una TABLA con las recetas.
+
+
+MODELO DE DATOS DE LAS RECETAS
+====================================================
+Es un array de objetos. Cada objeto tiene estas propiedades:
+[
+	{
+		id: 			123412342,
+		nombre:			"Acelgas estofadas",
+		tipo:			"Primer plato",
+		ingredientes:	".....",
+		preparacion:	".....",
+		dificultad:		6,
+		tiempo:			1.5,
+		foto: 			"xxxxxxx"
+	}
+]
+
+La propiedad id debe ser única para cada receta. Consejo: usa new Date().getTime() para obtener un número único. Es lo más sencillo
+
+Estos datos se guardan como una CADENA JSON en el localStorage, para tenerlos disponibles la próxima vez que entremos en la aplicación
+
+
+TABLA DE RECETAS
+====================================================
+En la página hay una tabla con estas columnas:
+	- nombre
+	- tipo
+	- dificultad
+	- tiempo
+	- acciones
+En la columna de acciones habrá estos 3 botones: 
+	- Detalles
+	- Editar
+	- Borrar
+
+
+DETALLES DE LA RECETA
+====================================================
+Al pulsar en el botón de detalles de una receta, se abrirá un <dialog> con toda la información de esa receta: nombre, ingredientes, preparación, foto... El <dialog> incluirá un botón para cerrarlo
+
+
+NUEVA RECETA
+====================================================
+En el <header> hay un botón para crear una nueva receta. Al pulsarlo, se abrirá otro <dialog> con un formulario con campos para el nombre, tipo, ingredientes, preparacion, dificultad, tiempo y foto (este último, no hagas nada con él de momento). 
+
+También hay dos botones: Guardar y Cancelar. Si pulsamos Cancelar, cerramos el <dialog> sin hacer nada. Si pulsamos Guardar,
+	- creamos un nuevo objeto a partir de lo que hayamos metido en los campos del formulario
+	- añadimos ese objeto al array de las recetas
+	- guardamos el array de las recetas como cadena JSON en el localStorage
+	- cerramos el <dialog>
+	- actualizamos la tabla de las recetas, o recargamos la página, como prefieras
+
+
+EDITAR Y BORRAR RECETA
+====================================================
+Esto lo dejamos para un poco más adelante; de momento ya tienes más que suficiente con todo esto...
+

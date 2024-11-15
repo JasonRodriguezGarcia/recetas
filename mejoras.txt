@@ -1,0 +1,11 @@
+05/11/2024 codificar tipo plato
+05/11/2024 validar campos
+07/11/2024 eliminar TODAS las recetas
+07/11/2024 imprimir receta
+07/11/2024 hover a las lineas de datos con color un poco más opaco
+
+nombre receta en el header 
+imprementar tema claro/oscuro
+copia datos para trabajar con:
+-paginacion recetas
+-ordenacion por columnas asc/desc flechaarriba/flechaabajo
