@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ole&display=swap');
+@import url("header.css");
+@import url("table.css");
+@import url("crear-receta.css");
+
+/* paletton.com Hue: 170º, BASE: 79C351 */
+body {
+    font-family: "Montserrat";
+    margin: 0px;
+    /* background-color: #89CD35; */
+    background-image: url("imagenes/fondo-transformed.webp");
+    background-size: cover;
+}
+

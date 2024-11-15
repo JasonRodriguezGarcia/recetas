@@ -1,0 +1,57 @@
+fieldset {
+    border-radius: 20px;
+    padding: 10px;
+}
+form {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+}
+input, select {
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 5px;
+}
+textarea {
+    resize: none;
+}
+input, textarea, button, select {
+    /* hereda del padre */
+    font-family: inherit;
+}
+#crearReceta {
+    background-color: #A0E07E;
+    border-radius: 20px;
+}
+#h1Receta {
+    background-color: #5AA830;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+}
+#crearReceta::backdrop {
+    backdrop-filter: blur(2px);
+    filter: sepia(50%);
+}
+#dificultad {
+    vertical-align: middle;
+}
+.ocultarBoton {
+    display: none;
+}
+#buttonsRecipe {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#buttonsRecipe button {
+    height: 40px;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+}
+#tiempo {
+    width: 50px;
+}
